@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+<body>
+    <!--// Assignment: JavaScript DOM I
+    Complete the appendList function. appendList should take an 
+    array of strings and the id of a <ul> element, and append all elements of the array as <li> tags.-->
+    <h1>Students</h1>
+    <ul id="main">
+        <!-- this is empty-->
+    </ul> 
+<script>
+    function appendList(array, id){
+        let myElement = document.getElementById(id);
+        for(let i = 0; i < array.length; i++){
+            let myNewElement = document.createElement("li");
+            let myValue = document.createTextNode(array[i]);
+            myNewElement.appendChild(myValue);
+            myElement.appendChild(myNewElement);
+        }
+        // finish this function
+    };
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    let target_id = "main";
+    appendList(students, target_id);
+</script>
+<script>
+        function superAppend(array, element, id){
+            if(typeof element == "string"){
+                if(Array.isArray(array)){
+                    if(typeof id == "string"){
+                        let myIdToAppendTo = document.getElementById(id);
+                        for(let i = 0; i < array.length; i ++){
+                            let myNewElement = document.createElement(element);
+                            let myValue = document.createTextNode(array[i]);
+                            myNewElement.appendChild(myValue);
+                            myIdToAppendTo.appendChild(myNewElement);
+                        };
+                        return true;
+                    }
+                    else{
+                        console.log("Input/arguement of id was not a string.");
+                        return false;
+                    }
+                }
+                else{
+                    console.log("Input/arguement of array was not an array.");
+                    return false;
+                }
+            }
+            else{
+                console.log("super append broke because input element was NOT a string.");
+                return false;
+            }
+        };
+        let newStudents = ["new", "name", "students", "bananas", "pumpkins", "butts"];
+        let idToplaceInto = "main";
+        let newElementName = "li";
+        superAppend(newStudents, newElementName, idToplaceInto);
+</script>
+</body>
+</html>
+<!--Copy
+Bonus: Create a new function called superAppend that also takes the type of element we want to append.
+
+function superAppend(array, element, id){
+    // element can be p, li, h1, etc etc
+};-->
