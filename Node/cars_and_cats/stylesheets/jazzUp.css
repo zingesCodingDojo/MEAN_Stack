@@ -1,0 +1,28 @@
+*{
+    margin: 1rem auto;
+}
+
+    #master{
+        width: 100%;
+    }
+        #mainBody{
+            width: 60%;
+        }
+            img{
+                width: 200px;
+                border: 1px solid black;
+            }
+            label{
+                vertical-align: top;
+            }
+
+            #newCarForm{
+                width: 40%;
+            }
+                ul{
+                    display: inline-block;
+                }
+                label, input{
+                    display: block;
+                    
+                }
