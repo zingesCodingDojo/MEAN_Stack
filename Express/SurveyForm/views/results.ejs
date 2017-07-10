@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--<title>Survey Form - results.ejs</title>-->
+        <link rel="stylesheet" type="text/css" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+        </div>
+        <div id="mainBody">
+            <fieldset>
+                <legend>Form Results</legend>
+                <ul>
+                    <label>Name:</label>
+                    <label>Dojo Location:</label>
+                    <label>Favorite Language:</label>
+                    <label>Comment:</label>
+                </ul>
+                    
+                <ul>
+                    <label><%= userInfo["Name"] %></label>
+                    <label><%= userInfo["DojoLocation"] %></label>
+                    <label><%= userInfo["Language"] %></label>
+                    <label><%= userInfo["Comments"] %></label>
+                </ul>
+            </fieldset>
+        </div>
+        <div id="footer">
+        </div>
+    </body>
+</html>
