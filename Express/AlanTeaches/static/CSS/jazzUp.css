@@ -1,0 +1,17 @@
+*{
+    margin: 0 auto;
+}
+
+    #master{
+        width: 100%;
+    }
+        fieldset{
+            width: 40%;
+        }
+        
+        fieldset ul{
+            display: inline-block;
+        }
+        fieldset label, input{
+            display: block;
+        }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello title</title>
+        <link rel="stylesheet" type="text/css" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <legend>Hello, I am a form</legend>
+                    <form action="/process" method="post">
+                        <ul>
+                            <label>Quote</label>
+                            <label>Author</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="quote" placeholder="stuff">
+                            <input type="text" name="author" placeholder="stuff">
+                        </ul>
+                        <button type="submit">Submit</button>
+
+                    </form>
+                </fieldset>
+
+                <button action="/showall" method="post" type="submit" name="button">Skip this stuff</button>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

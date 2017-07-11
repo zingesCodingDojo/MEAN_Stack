@@ -1,0 +1,22 @@
+*{
+    display: inline-block;
+}
+
+    #master{
+        width: 100%;
+        text-align: center;
+    }
+        #mainBody{
+            width: 100%;
+        }
+            #mainBody ul{
+                display: inline-block;
+            }
+            #mainBody select, input, label, p{
+                display: block;
+            }
+
+        #resultsDiv{
+            width: 50%;
+            background-color:lightgreen;
+        }

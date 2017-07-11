@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="/CSS/jazzUp.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="../socket.io/socket.io.js"></script>
+        <script type ="text/javascript" src="JS/mySocketLogic.js"></script>
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                <legend>Survey Form</legend>
+                <form id="SurveyForm" action="/surveyForm" method="post">
+                    <ul>
+                        <label>Your Name:</label>
+                        <label>Dojo Location:</label>
+                        <label>Favorite Language</label>
+                    </ul>
+                    <ul>
+                        <input type="text" name="Name" placeholder="example: Jim">
+                        <select name="DojoLocation">
+                            <option value="Seattle">Seattle</option>
+                            <option value="Silicon Valley">Silicon Valley</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Washington DC">Washington DC</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Tulsa">Tulsa</option>
+                            <option value="Berkeley">Berkeley</option>
+                            <option value="Orange County">Orange County</option>
+                        </select>
+                        <select name="Language">
+                            <option name="Python">Python</option>
+                            <option name="MEAN">MEAN</option>
+                            <option name="Ruby">Ruby on Rails</option>
+                            <option name="iOS">iOS</option>
+                            <option name="C#">C#</option>
+                            <option name="Java">Java</option>
+                        </select> 
+                    </ul>
+                    <label>Comments(optional):</label>
+                    <textarea name="Comments" cols="35" rows="4" placeholder="comments go here..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="/CSS/jazzUp.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="../socket.io/socket.io.js"></script>
+        <script type ="text/javascript">
+            $(document).ready(function(){
+                var socket = io.connect();
+                $("button").click(function(){
+                    socket.emit("button_clicked", {reason: "because I want to learn about sockets!"});
+                });
+                socket.on("server_response", function(data){
+                    console.log("The Server says: " + data.response);
+                })
+                
+                // we'll write all the socket stuff after the above line!
+            });
+        </script>
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+            </div>
+            <div id="mainBody">
+                <button>I am a button!</button>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>
