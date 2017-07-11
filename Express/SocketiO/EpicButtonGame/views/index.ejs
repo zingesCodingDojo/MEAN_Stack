@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Epic Button Game!</title>
+        <link rel="stylesheet" type="text/css" href="/CSS/jazzUp.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="../socket.io/socket.io.js"></script>
+        <script type ="text/javascript" src="JS/mySocketLogic.js"></script>
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>The button has been pushed &nbsp</h1><h1 id="myCounterID"></h1><h1>&nbsp time(s)</h1>
+            </div>
+            <div id="mainBody">
+                <p>Push the button to update the count!</p>
+                
+                <button id="counterButton">Push the epic button</button>
+                
+            </div>
+            <div id="footer">
+                <button id="resetButton">Reset Count</button>
+            </div>
+        </div>
+    </body>
+</html>

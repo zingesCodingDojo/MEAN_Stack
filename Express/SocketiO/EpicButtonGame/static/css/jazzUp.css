@@ -1,0 +1,28 @@
+*{
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+    #master{
+        width: 100%;
+        text-align: center;
+    }
+
+    #header h1, h2{
+        display: inline-block;
+    }
+    
+    #counterButton{
+        width: 250px;
+        height: 100px;
+        background: lightblue;
+        font-size: 1.25rem;
+        border-radius: 25px;
+    }
+    #resetButton{
+        width: 150px;
+        height: 50px;
+        background: darkred;
+        color: white;
+        font-size: 0.75rem;
+        border-radius: 5px;
+    }
