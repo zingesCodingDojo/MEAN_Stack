@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MEAN - Quotes - MEAN</title>
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Here are the awesome quotes!</h1>
+            </div>
+            <div id="mainBody">
+                <!-- <% for(let items in context) { %>
+                    <p><%= context[items] %></p>
+                <% } %> -->
+                
+                <% context.forEach((thing) =>{ %>
+                    <h3><%=thing.quote %></h3>
+                    <p>- <%=thing.name %> at <%= thing.created_at %></p> 
+                <% }) %>
+            </div>
+            <div id="footer">
+                <a href="/">Go back!</a>
+            </div>
+        </div>
+    </body>
+</html>

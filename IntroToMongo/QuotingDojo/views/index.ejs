@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MEAN - Quoting Dojo - MEAN</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Welcome to QuotingDojo</h1>
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <form action="/addQuote" method="post">
+                        <ul>
+                            <label>Your Name:</label>
+                            <label>Your Quote:</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="UserName" placeholder="example: Jim">
+                            <textarea name="UserQuote" placeholder="example: blah blah blah..."></textarea>
+                        </ul>
+                        <button type="submit">Add my quote!</button>
+                    </form>
+                    <form action="/skip" method="get">
+                        <button type="submit">Skip to Quotes!</button>
+                    </form>
+                </fieldset>
+            </div>
+            <div id="footer">
+                <% if(typeof(errors) != "undefined") { %>
+                    <% for(let i in errors) { %>
+                        <p><%= errors[i].message %></p>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>

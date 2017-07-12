@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Overview Example - index.html</title>
+        <style>
+            *{
+                margin: 0 auto;
+            }
+
+                #master{
+                    width: 100%;
+                    text-align: center;
+                }
+                    #mainBody{
+                        width: 60%;
+                    }
+                        #mainBody ul{
+                            display: inline-block;
+                        }
+                        #mainBody select, input, label, p{
+                            display: block;
+                        }
+
+                    #resultsDiv{
+                        width: 50%;
+                        background-color:lightgreen;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <legend><h1>User Form</h1></legend>
+                    <form action="/users" method="post">
+                        <ul>
+                            <label>Name:</label>
+                            <label>Age:</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="UserName" placeholder="example: Jim">
+                            <input type="number" name="UserAge" placeholder="example: 24">
+                        </ul>
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+            </div>
+            <div id="footer">
+                <% for(let items in context) { %>
+                    <p><%= context[items] %></p>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>
