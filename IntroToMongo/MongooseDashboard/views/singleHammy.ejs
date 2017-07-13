@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>singleHammy.ejs</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Welcome to single information!</h1>
+            </div>
+            <div id="mainBody">
+                <% singleHammy.forEach((thing) =>{ %>
+                    <div class="individualHammy">
+                        <a href="/hamster/<%= thing._id %>"><h3><%=thing.name %></h3></a>
+                        <p>Age: <%=thing.age %></p>
+                        <img src="<%= thing.image %>" alt="<%= thing._id %>">
+                        <p><%=thing.description %></p>
+                    </div>
+                <% }) %>
+                
+            </div>
+            <div id="footer">
+                <fieldset>
+                    <legend>Edit Hammy</legend>
+                    <% singleHammy.forEach((newThing) =>{ %>
+                        <form action="/hamster/edit/<%= newThing._id %>" method="post">
+                            <ul>
+                                <label>Hammy Name:</label>
+                                <label>Hammy Age:</label>
+                                <label>Hammy URL:</label>
+                                <label>Description</label>
+                            </ul>
+                            <ul>
+                                <input type="text" name="HamsterName" placeholder="example: Hamtaro" value="<%= newThing.name %>">
+                                <input type="number" name="HamsterAge" value="<%= newThing.age %>">
+                                <input type="text" name="HamsterImage" placeholder="example: www.blah..." value="<%= newThing.image %>">
+                                <textarea name="HamsterDescription" placeholder="example: Napping... all day!"><%= newThing.description %></textarea>
+                            </ul>
+                            <button type="submit">Edit Hammy!</button>
+                        </form>
+                    <% }) %>
+                </fieldset>
+            </div>
+        </div>
+        <div id="beGone">
+            <% singleHammy.forEach((otherThing) =>{ %>
+                <a href="/deleteHamster/<%= otherThing._id %>">Delete Hammy</a>
+            <% }) %>
+        </div>
+    </body>
+</html>

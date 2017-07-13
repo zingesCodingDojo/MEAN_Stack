@@ -46,6 +46,7 @@ app.get("/skip", (req, res) => {
     res.redirect("/quotes");
 });
 
+
 app.get("/quotes", (req, res) =>{
     Quote.find({}, (err, myQuotes) => {
         if(err){
