@@ -1,0 +1,35 @@
+*{
+    margin: 0.25em;
+}
+    #master{
+        width: 100%;
+    }
+        #header{
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        #mainBody{
+            width: 100%;
+        }
+            fieldset ul{
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            fieldset label, input, textarea{
+                margin: 0.5em;
+                display: block;
+            }
+            
+        .individualPost{
+            margin: 1rem;
+            margin-bottom: 2rem;
+        }
+            .topLine{
+                display: inline-block;
+            }
+            .bottomLine{
+                display: inline-block;
+                margin-bottom: 1.25em;
+            }

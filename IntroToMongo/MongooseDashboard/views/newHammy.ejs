@@ -31,9 +31,8 @@
                 </fieldset>
             </div>
             <div id="footer">
-                <form action="/cancel" method="get">
-                    <button type="submit">Cancel</button>
-                </form>
+                <a href="/cancel">Cancel</a>
+                
                 <% if(typeof(errors) != "undefined") { %>
                     <% for(let i in errors) { %>
                         <p><%= errors[i].message %></p>

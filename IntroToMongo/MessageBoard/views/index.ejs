@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Message Board - Mongoose... index.ejs</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>The Dojo Message Board</h1>
+            </div>
+            <div id="mainBody">
+                <fieldset id="mainField">
+                    <legend>Post Form</legend>
+                    <form action="/postMessage" method="post">
+                        <ul>
+                            <label>Name:</label>
+                            <label>Message:</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="PostName" placeholder="exmaple: Jim">
+                            <textarea name="PostMessage" cols="50" rows="5" placeholder="My thoughts for today are..."></textarea> 
+                        </ul>
+                        <button type="submit">Post Message</button>
+                    </form>
+                    <% if(typeof(errors) != "undefined") { %>
+                        <% for(let i in errors) { %>
+                            <p>ERRRORRORORRO</p>
+                            <p><%= errors[i].message %></p>
+                        <% } %>
+                    <% } %>
+                </fieldset>
+            </div>
+            <div id="footer">
+                <% context.forEach((item) => { %>
+                    
+                    <div class="individualPost">
+                        <p class="topLine">Name: <h4 class="topLine"><%= item.name %></h4></p>
+                        <p class="bottomLine">Message: <h5 class="bottomLine"><%= item.messageText %></h5></p>
+                            <% for(let i = 0; i < item.comments.length; i++){%>
+                                <p style="margin-bottom: 0.75rem;" class="topLine">Name: <h4 class="topLine"><%= item.comments[i].commentName %></h4></p>
+                                <p style="margin-bottom: 1.25em;" class="bottomLine">Comment: <h5 class="bottomLine"><%= item.comments[i].commentText %></h5></p>
+                            <%}%>
+                        <fieldset>
+                            <legend>Make a comment</legend>
+                            <form action="/addComment/<%= item._id %>" method="post">
+                                <label>Name:</label>
+                                <input type="text" name="CommentName" placeholder="example: Dwight...">
+                                <label>Comment:</label>
+                                <textarea name="CommentMessage" cols="50" rows="5" placeholder=". . ."></textarea>
+                                <button type="submit">Add Comment</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                    
+                    
+    
+                <% }) %>
+            </div>
+        </div>
+    </body>
+</html>
