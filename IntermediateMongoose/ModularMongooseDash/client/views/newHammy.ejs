@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>newHammy.ejs</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Want to add a hammy?</h1>
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <legend><h3>Add new hammy form!</h3></legend>
+                    <form action="/hamster" method="post">
+                        <ul>
+                            <label>Hammy Name:</label>
+                            <label>Hammy Age:</label>
+                            <label>Hammy URL:</label>
+                            <label>Description</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="HamsterName" placeholder="example: Hamtaro">
+                            <input type="number" name="HamsterAge">
+                            <input type="text" name="HamsterImage" placeholder="example: www.blah...">
+                            <textarea name="HamsterDescription" placeholder="example: Napping... all day!"></textarea>
+                        </ul>
+                        <button type="submit">Add Hammy!</button>
+                    </form>
+                </fieldset>
+            </div>
+            <div id="footer">
+                <a href="/cancel">Cancel</a>
+                
+                <% if(typeof(errors) != "undefined") { %>
+                    <% for(let i in errors) { %>
+                        <p><%= errors[i].message %></p>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0 auto;
+    text-align: center;
+}
+    #master{
+        width: 100%;
+    }
+
+        #mainBody{
+            width: 50%;
+        }
+            fieldset ul{
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            label, input, textarea{
+                margin: 0.5em;
+                display: block;
+            }
+            #mainBody p{
+                display: inline-block;
+            }
+            #mainBody img{
+                width: 150px;
+                height: 150px;
+            }
+                .individualHammy{
+                    width: 200px;
+                    
+                }
+                .individualHammy h3, p{
+                    text-align: left;
+                }
+                .individualHammy{
+                    display: inline-block;
+                    margin: 2rem;
+                }

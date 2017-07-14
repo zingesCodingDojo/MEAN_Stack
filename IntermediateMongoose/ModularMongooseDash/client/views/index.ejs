@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mongoose Dashboard with Hamsters</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Welcome to the Hammy Dashboard</h1>
+            </div>
+            <div id="mainBody">
+                <% context.forEach((thing) =>{ %>
+                    <div class="individualHammy">
+                        <a href="/hamster/<%= thing._id %>"><h3><%=thing.name %></h3></a>
+                        <p>Age: <%=thing.age %></p>
+                        <img src="<%= thing.image %>" alt="<%= thing._id %>">
+                        <p><%=thing.description %></p>
+                    </div>
+                <% }) %>
+            </div>
+            <div id="footer">
+                <fieldset>
+                    <legend>Add new Hammy</legend>
+                    <a href="/hamster/new">
+                        <button>Add New Hammy</button>
+                    </a>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>
