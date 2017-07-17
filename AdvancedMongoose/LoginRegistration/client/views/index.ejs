@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login Registration - index.ejs</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>Welcome to Login and Registration!</h1>
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <legend>Register User</legend>
+                    <form action="/createUser" method="post">
+                        <ul>
+                            <label>First Name:</label>
+                            <label>Last Name:</label>
+                            <label>Email:</label>
+                            <label>Password:</label>
+                            <label>Password Confirmation:</label>
+                            <label>Age:</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="FirstName" placeholder="example: Jim">
+                            <input type="text" name="LastName" placeholder="example: Halper">
+                            <input type="email" name="Email" placeholder="example: halpji@dunder.com">
+                            <input type="password" name="Password" placeholder="Secret">
+                            <input type="password" name="PasswordConfirm" placeholder="Secret">
+                            <input type="date" name="Birthday">
+                        </ul>
+                        <button type="submit">Register User</button>
+                    </form>
+                </fieldset>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

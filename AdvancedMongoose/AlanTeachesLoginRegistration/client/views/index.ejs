@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Index file!</title>
+        <link rel="stylesheet" href="/CSS/jazzUp.css">
+    </head>
+    <body>
+        <div id="master">
+            <div id="header">
+                <h1>This is my Index page. Also known where Login and Registration will happen!</h1>
+            </div>
+            <div id="mainBody">
+                <fieldset>
+                    <legend>Register User</legend>
+                    <form action="/createUser" method="post">
+                        <ul>
+                            <label>First Name:</label>
+                            <label>Last Name:</label>
+                            <label>Email:</label>
+                            <label>Password:</label>
+                            <label>Password Confirm:</label>
+                            <label>Age:</label>
+                        </ul>
+                        <ul>
+                            <input type="text" name="first_name" placeholder="example: Jim">
+                            <input type="text" name="last_name" placeholder="example: Halper">
+                            <input type="email" name="email" placeholder="example: halpji@dunder.com">
+                            <input type="password" name="password" placeholder="Secret">
+                            <input type="password" name="password_confirm" placeholder="Secret">
+                            <input type="age" name="age">
+                        </ul>
+                        <button type="submit">Register</button>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>Login User</legend>
+                    <form action="/loginUser" method="post">
+                        <ul>
+                            <label>Email:</label>
+                            <label>Password:</label>
+                        </ul>
+                        <ul>
+                            <input type="email" name="email" placeholder="example: halpji@dunder.com">
+                            <input type="password" name="password" placeholder="Secret">
+                        </ul>
+                        <button type="submit">Login</button>
+                    </form>
+            </div>
+            <div id="footer">
+                <% if(typeof(err) != "undefined") { %>
+                    <%= err %>
+                    <% for(let i in err) {%>
+                        <p><%= err[i].message %></p>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>
