@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+}
+    #master{
+      width: 100%;
+      text-align: center;
+    }
+        #mainBody button{
+          display: inline-block;
+          width: 5rem;
+          height: 3rem;
+          font-size: 1em;
+        }
+        .timeClicked{
+          background-color: yellow;
+        }

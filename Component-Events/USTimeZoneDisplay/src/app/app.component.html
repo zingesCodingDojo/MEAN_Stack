@@ -1,0 +1,16 @@
+<div id="master">
+    <div id="header">
+        <h1>US Time Zone Display</h1>
+    </div>
+    <div id="mainBody">
+        <button id="pacific" (click)="onPST()" [ngClass]="{timeClicked: mySelectedValue === 'Pacific'}">PST</button>
+        <button id="mountain" (click)="onMST()" [ngClass]="{timeClicked: mySelectedValue === 'Mountain'}">MST</button>
+        <button id="central" (click)="onCST()" [ngClass]="{timeClicked: mySelectedValue === 'Central'}">CST</button>
+        <button id="eastern" (click)="onEST()" [ngClass]="{timeClicked: mySelectedValue === 'Eastern'}">EST</button>
+        <button id="clear" (click)="clear()">Clear</button>
+    </div>
+    <div id="footer">
+        <h3>{{ myCurrentTime | date:'medium'}}</h3>
+    </div>
+</div>
+
