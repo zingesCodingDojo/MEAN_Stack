@@ -1,0 +1,28 @@
+*{
+  margin: 0 auto;
+}
+    #master{
+      width: 100%;
+    }
+      #mainBody{
+        width:100%;
+      }
+        fieldset{
+          width: 100%;
+        }
+        ul{
+          display: inline-block;
+          vertical-align: top;
+        }
+        label, input, select{
+          display: block;
+        }
+        label{
+          padding: 0.3em;
+        }
+        input{
+          margin: 0.75em;
+        }
+      .radioButtons{
+          display: inline-block;
+      }

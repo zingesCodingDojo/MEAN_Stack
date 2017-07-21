@@ -1,0 +1,114 @@
+<div id="master">
+  <div id="header">
+    <h1>Registration</h1>
+        <h3 *ngIf="formData.valid">Thank you for registering with us {{ users[0].first_name }}. We just sent you a confirmation email at {{ users[0].email }}</h3>
+  </div>
+  <div id="mainBody">
+    <!-- pattern="^([a-zA-Z0-9@*#]{16, 30})$" -->
+    <fieldset>
+      <legend>Account Information</legend>
+      <form (submit)="onSubmit()" #formData='ngForm'>
+        <ul>
+            <label>*First Name</label>
+            <label>*Last Name</label>
+            <label>*Email</label>
+            <label>*Password</label>
+            <label>*Password Confirmation</label>
+            <label>*Street Address</label>
+            <label>Unit/Apt #</label>
+            <label>*City</label>
+            <label>State</label>
+            <label>*I am feeling Lucky</label>
+        </ul>
+        <ul>
+            <input type="text" name="first_name"
+              required
+              minlength="4" maxlength="24"
+              [(ngModel)]="user.first_name"
+              #first_name='ngModel'
+            />
+            <input type="text" name="last_name"
+              required
+              minlength="4" maxlength="24"
+              [(ngModel)]="user.last_name"
+              #last_name='ngModel'
+            />
+            <input type="email" name="email"
+              required
+              minlength="4" maxlength="24"
+              [(ngModel)]="user.email"
+              #email='ngModel'
+            />
+            <input type="password" name="password"
+              required
+              minlength="16" maxlength="30"
+              [(ngModel)]="user.password"
+              #password='ngModel'
+            />
+            <input type="password" name="password_confirmation"
+              required
+              minlength="16" maxlength="30"
+              [(ngModel)]="user.password_confirmation"
+              #password_confirmation='ngModel'
+            />
+            <input type="text" name="street_address"
+              required
+              minlength="3"
+              [(ngModel)]="user.street_address"
+              #street_address='ngModel'
+            />
+            <input type="text" name="unit_apt"
+              minlength="1"
+              [(ngModel)]="user.unit_apt"
+              #unit_apt="ngModel"
+            />
+            <input type="text" name="city"
+              required
+              minlength="4" maxlength="24"
+              [(ngModel)]="user.city"
+              #city="ngModel"
+            />
+            <select name="state"
+              required
+              minlength="2" maxlength="30"
+              [(ngModel)]="user.state"
+              #state="ngModel"
+            >
+                <option value="Alaska">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+            </select>
+            <input class="radioButtons" type="radio" name="lucky"
+              required
+              [(ngModel)]="user.lucky"
+              #lucky="ngModel"
+              value="Yes"/>Yes
+
+            <input class="radioButtons" type="radio" name="lucky"
+              required
+              [(ngModel)]="user.lucky"
+              #lucky="ngModel"
+              value="No"/>No
+        </ul>
+        <ul *ngIf="formData">
+            <label>{{ first_name.errors | json }}</label>
+            <label>{{ last_name.errors | json }}</label>
+            <label>{{ email.errors | json }}</label>
+            <label>{{ password.valid | json }}</label>
+            <label>Passwords must match</label>
+            <label>{{ street_address.errors | json }}</label>
+            <label>{{ unit_apt.errors | json }}</label>
+            <label>{{ city.errors | json }}</label>
+            <label>{{ state.errors | json }}</label>
+            <label>{{ lucky.errors | json }}</label>
+        </ul>
+        <input type="submit">
+      </form>
+    </fieldset>
+  </div>
+  <div id="footer">
+  </div>
+</div>
+{{ formData.valid | json }}
+{{ formData.errors | json }}
