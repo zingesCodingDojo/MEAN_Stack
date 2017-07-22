@@ -1,0 +1,19 @@
+<div id="master">
+    <fieldset>
+      <legend>PowerLevelComponent</legend>
+      <div id="header">
+          <h1>Initial Power Level:</h1>
+          <input type="number" min="1" max="100" [(ngModel)]="myPower">
+      </div>
+      <div id="mainBody">
+          <app-human class="thirty" [myPower]="myPower"></app-human>
+          <app-saiyan class="thirty" [myPower]="myPower"></app-saiyan>
+          <app-supersaiyan class="thirty" [myPower]="myPower"></app-supersaiyan>
+          <app-supersaiyan-two class="thirty" [myPower]="myPower"></app-supersaiyan-two>
+          <app-supersaiyan-three class="thirty" [myPower]="myPower"></app-supersaiyan-three>
+          <app-supersaiyan-four class="thirty" [myPower]="myPower"></app-supersaiyan-four>
+      </div>
+      <div id="footer">
+      </div>
+  </fieldset>
+</div>
