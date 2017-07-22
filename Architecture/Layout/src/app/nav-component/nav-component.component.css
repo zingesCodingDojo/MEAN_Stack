@@ -1,0 +1,18 @@
+#master{
+    background: radial-gradient(azure, blanchedalmond, aqua);
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.15em 0.5em;
+    border-radius: 0.75em;
+}
+    button{
+        display: block;
+        width: 100%;
+        background-color:limegreen;
+        border-radius: 1em;
+        margin: 0.25em;
+    }
+    a{
+        color: red;
+        font-size: 2em;
+    }

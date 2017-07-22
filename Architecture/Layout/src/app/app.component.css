@@ -1,0 +1,17 @@
+*{
+    margin: 0 auto;
+}
+    #header{
+
+        width: 100%;
+    }
+    #nav{
+        width: 30%;
+    }
+    #secondaryBody{
+        width: 50%;
+    }
+    #nav, #secondaryBody{
+        display: inline-block;
+        vertical-align: top;
+    }
