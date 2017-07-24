@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs';
+import 'RxJS';
 
 @Injectable()
 export class GithubAPIService {
