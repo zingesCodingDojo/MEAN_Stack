@@ -1,0 +1,15 @@
+<div id="master">
+    <div id="header">
+        <h1>All Quotes</h1>
+    </div>
+    <div id="mainBody" *ngFor="let singleQuote of quoteInfo">
+        <p> {{ singleQuote.quote }} </p>
+        <p> {{ singleQuote.author }} </p>
+        <p> Total Rating! {{ singleQuote.voteCount }}</p>
+        <button class="like" (click)="likeQuote(singleQuote)">Vote Up</button>
+        <button class="dislike" (click)="dislikeQuote(singleQuote)">Vote Down</button>
+        <button class="delete" (click)="delete(singleQuote)">Delete</button>
+    </div>
+    <div id="footer">
+    </div>
+</div>

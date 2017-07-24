@@ -1,0 +1,29 @@
+<div id="master">
+    <div id="header">
+        <h1>Add a Quote</h1>
+    </div>
+    <div id="mainBody">
+        <form (submit)="onSubmit(formData)" #formData="ngForm">
+            <textarea name="quote" cols="55" rows="5" [(ngModel)]="myNewQuote.quote"
+            required
+            name="quote"
+            minlength="4" maxlength="200"
+            #quoteBody="ngModel"
+            placeholder="Your amazing Quote goes here!"></textarea>
+
+            <input type="text" name="author" [(ngModel)]="myNewQuote.author"
+            required
+            minlength="4"
+            #author="ngModel"
+            placeholder="example: Jim"/>
+            <button type="submit" [disabled]="!formData.valid">Add Quote</button>
+        </form>
+    </div>
+    <div id="footer">
+          <h5 *ngIf="!quoteBody.valid">Quote is required! And cannot be longer than 200 characters!</h5>
+          <h5 *ngIf="!author.valid">Author is required.</h5>
+    </div>
+    <div id="myQuotes">
+        <!-- <app-quote-details></app-quote-details> -->
+    </div>
+</div>

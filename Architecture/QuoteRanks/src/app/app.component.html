@@ -1,0 +1,10 @@
+<div id="master">
+    <div id="header">
+    </div>
+    <div id="mainBody">
+      <app-quote-maker [quoteInfo]="quoteInfo" (quoteEvent)="createNewQuote($event)"></app-quote-maker>
+    </div>
+    <div id="footer">
+      <app-all-my-quotes [quoteInfo]="quoteInfo" (allQuotesEmitter)="removeQuote($event)"></app-all-my-quotes>
+    </div>
+</div>
