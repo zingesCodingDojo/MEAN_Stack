@@ -1,0 +1,9 @@
+#master{
+  width: 100%;
+}
+  #mainBody{
+    width: 30%;
+  }
+  #mainBody, #footer{
+    display: inline-block;
+  }
