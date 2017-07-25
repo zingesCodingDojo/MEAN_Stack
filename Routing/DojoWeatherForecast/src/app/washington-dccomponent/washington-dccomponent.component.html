@@ -1,0 +1,28 @@
+<div id="master">
+    <div id="header">
+        <h1>Dojo Weather Forecast</h1>
+        <a [routerLink]="['/seattle']">Seattle WA</a>
+        <a [routerLink]="['/sanjose']">San Jose CA</a>
+        <a [routerLink]="['/burbank']">Burbank CA</a>
+        <a [routerLink]="['/dallas']">Dallas TX</a>
+        <a [routerLink]="['/washingtondc']">Washington DC</a>
+        <a [routerLink]="['/chicago']">Chicago IL</a>
+    </div>
+    <div id="mainBody">
+        <fieldset>
+          <h1>Washington, DC</h1>
+          <div id="info">
+            <p>Humidity: {{ humidity }}</p>
+            <p>Temperature (avg.):  {{ avgTemp }} Farenheit</p>
+            <p>Temperature (high): {{ highTemp }} Farenheit</p>
+            <p>Temperature (low): {{ lowTemp }} Farenheit</p>
+            <p>Status: {{ status }}</p>
+          </div>
+          <div id="coolImage">
+            <img src="https://i.ytimg.com/vi/QTZQ9bta31w/maxresdefault.jpg" alt="washingtdcImage" width="500px">
+          </div>
+        </fieldset>
+    </div>
+    <div id="footer">
+    </div>
+</div>

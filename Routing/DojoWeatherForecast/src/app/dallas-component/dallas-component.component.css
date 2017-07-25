@@ -1,0 +1,29 @@
+*{
+    margin: 0 auto;
+}
+    #master{
+        text-align: center;
+    }
+      #header h1{
+          margin-bottom: 0.25em;
+      }
+      #header, #mainBody, #footer{
+          margin: 2em auto;
+      }
+      #mainBody{
+          width: 75%;
+      }
+      fieldset #info, #coolImage{
+          display: inline-block;
+          vertical-align: top;
+      }
+      fieldset h1{
+        margin-bottom: 0.25em;
+      }
+        #info{
+            margin-right: 10em;
+            text-align: left;
+        }
+          #info p{
+              margin: 0.75em;
+          }
